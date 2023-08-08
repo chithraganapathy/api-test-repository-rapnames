@@ -32,7 +32,7 @@ app.get('/api/:paramname', (request, response) => {
 		response.json(rappers['unknown'].birthName)
 })
 
-app.listen(PORT, () => {
+app.listen(PORT || process.env.PORT, () => {
 	console.log(`Server is running on port ${PORT}!`);
 })
 
